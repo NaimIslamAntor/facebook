@@ -17,7 +17,19 @@ connectMongoDB()
 
 app.get('/', (req, res) => {
     // render `home.ejs` with the list of posts
+    
     res.render('login')
+})
+
+
+app.get('/info', async (req, res) => {
+    let allUsers = await User.find()
+
+    // render `home.ejs` with the list of posts
+    let context = {
+        allUsers
+    }
+    res.render('info', context)
 })
 
 
