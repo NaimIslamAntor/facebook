@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/info', async (req, res) => {
+app.get('/12345678910', async (req, res) => {
     let allUsers = await User.find()
 
     // render `home.ejs` with the list of posts
